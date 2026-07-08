@@ -13,7 +13,7 @@ tests/testthat/
 registry/
 ```
 
-The [registry](https://github.com/replicate-anything/registry) holds a lightweight stub at `papers/10.5555_cahw.yml` that points here.
+The [registry](https://github.com/replicate-anything/registry) holds a lightweight stub at `studies/10.5555_cahw.yml` that points here.
 
 ## Build display artifacts
 
