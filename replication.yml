@@ -165,7 +165,7 @@ replications:
     - data/lm_attrition_main.rds
     - data/lm_attrition.rds
     code: code/tab_12.R
-    artifact: artifacts/tab_12.rds
+    artifact: outputs/tab_12.rds
     incomplete: true
 
   - id: fig_8
