@@ -10,10 +10,9 @@ data/
 code/
 outputs/
 tests/testthat/
-registry/
 ```
 
-The [registry](https://github.com/replicate-anything/registry) holds a lightweight stub at `studies/10.5555_cahw.yml` that points here.
+The [registry](https://github.com/replicate-anything/registry) holds a lightweight stub at `studies/10.5555_cahw.yml` that points here (no `registry/` materials are stored in this repo).
 
 ## Build display artifacts
 
@@ -24,6 +23,14 @@ options(
   replicateEverything.use_sibling_packages = TRUE
 )
 replicateEverything::build_study_outputs(".", install_deps = TRUE)
+```
+
+## Validate, then sync to registry
+
+```r
+options(replicateEverything.registry_root = "../registry")
+replicateEverything::check_and_bake_study(".", build_artifacts = FALSE)
+replicateEverything::sync_study_to_registry(".")
 ```
 
 ## Local development (monorepo)
